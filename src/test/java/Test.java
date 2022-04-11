@@ -1,14 +1,11 @@
 import org.openqa.selenium.By;
+import org.testng.Assert;
 
 public class Test extends WebDriverClass{
 
     private String siteUrl = "https://qa2.eatstreet.com";
 
-    public void printText(){
-        System.out.println("test");
-    }
-
-    @Test
+    @org.testng.annotations.Test
     public void openRegister(){
         driver.get(siteUrl + "/create-account");
 
