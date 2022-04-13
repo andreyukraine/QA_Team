@@ -1,5 +1,6 @@
 package pageObjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -17,5 +18,13 @@ public class AmazonHomePageHelper extends AmazonHomePageElements{
         getSearchField().sendKeys(word);
         getSearchBtn().click();
         return new AmazonSearchResultPage(driver);
+    }
+
+    public WebElement getMenu(){
+        return driver.findElement(By.xpath("//div[@id='nav-xshop']"));
+    }
+
+    public WebElement getBlockGaming(){
+        return driver.findElement(By.xpath("//div[@class='a-cardui-header']/h2"));
     }
 }

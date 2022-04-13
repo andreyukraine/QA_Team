@@ -14,4 +14,6 @@ public class AmazonSearchResultPage extends BasePage{
         return driver.findElement(By.xpath("//span[@class='s-pagination-strip']"));
     }
 
+
+
 }

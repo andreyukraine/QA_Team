@@ -35,5 +35,22 @@ public class AmazonTest{
         AmazonSearchResultPage resutSearch = homePage.searchWord("dog");
         Assert.assertTrue(resutSearch.getSearchResult().isDisplayed());
     }
+    @Test
+    public void menuDisplay(){
+        AmazonHomePageHelper homePage = new AmazonHomePageHelper(driver);
+        homePage.navigateUrl();
+        homePage.openFullScreen();
+
+        Assert.assertTrue(homePage.getMenu().isDisplayed());
+    }
+
+    @Test
+    public void gamingBlock(){
+        AmazonHomePageHelper homePage = new AmazonHomePageHelper(driver);
+        homePage.navigateUrl();
+        homePage.openFullScreen();
+
+        Assert.assertTrue(homePage.getBlockGaming().isDisplayed());
+    }
 
 }
