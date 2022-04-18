@@ -2,10 +2,9 @@ package pageObjects;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 
 public class BasePage {
 
@@ -15,6 +14,10 @@ public class BasePage {
 
     public void openFullScreen(){
         driver.manage().window().maximize();
+    }
+
+    public void navigateUrl(){
+        driver.get("https://www.amazon.com/");
     }
 
     public void waitElementByLocatorByText(String locator, String text, int second){
