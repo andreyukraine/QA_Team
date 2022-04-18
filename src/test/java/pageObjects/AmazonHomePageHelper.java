@@ -10,21 +10,13 @@ public class AmazonHomePageHelper extends AmazonHomePageElements{
         super(driver);
     }
 
-    public void navigateUrl(){
-        driver.get("https://www.amazon.com/");
-    }
-
-    public AmazonSearchResultPage searchWord(String word){
+    public AmazonSearchResultHelper searchWord(String word){
         getSearchField().sendKeys(word);
         getSearchBtn().click();
-        return new AmazonSearchResultPage(driver);
+        return new AmazonSearchResultHelper(driver);
     }
 
-    public WebElement getMenu(){
-        return driver.findElement(By.xpath("//div[@id='nav-xshop']"));
-    }
 
-    public WebElement getBlockGaming(){
-        return driver.findElement(By.xpath("//div[@class='a-cardui-header']/h2"));
-    }
+
+
 }
